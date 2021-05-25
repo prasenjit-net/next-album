@@ -4,7 +4,7 @@ import style from "../../styles/AlbumGrid.module.css";
 import Link from "next/link";
 
 const ImageItem = ({image, albumId}) => {
-    const imageUrl = "https://picsum.photos/seed/" + albumId + "-" + image.id + "/600/400";
+    const imageUrl = "https://picsum.photos/id/" + image.id + "/600/400";
     return (
         <Card className={style.albumCard}>
             <Card.Body>
@@ -15,7 +15,7 @@ const ImageItem = ({image, albumId}) => {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi fugit labore minima non
                         possimus similique.
                     </Card.Text>
-                    <Link href={"/image/" + albumId + "-" + image.id} passHref>
+                    <Link href={"/image/" + image.id} passHref>
                         <Card.Link href="#">Open</Card.Link>
                     </Link>
                 </Card.Body>

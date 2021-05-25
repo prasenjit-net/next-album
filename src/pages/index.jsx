@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
     const resp = await fetch("https://jsonplaceholder.typicode.com/albums");
     const js = await resp.json();
     const albums = js.map((a, i) => {
-        return {...a, thumbnail: "https://picsum.photos/seed/" + i + "/300/200"}
+        return {...a, thumbnail: "https://picsum.photos/seed/a-" + i + "/300/200"}
     })
     return {
         props: {

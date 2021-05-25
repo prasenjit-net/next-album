@@ -3,20 +3,19 @@ import {NextSeo} from 'next-seo';
 import ImageGrid from "../../components/album/ImageGrid";
 
 const AlbumPage = (props) => {
-    const albumTitle = "Album " + props.album.title;
     const [images, setImages] = useState([]);
     useEffect(()=>{
-        fetch("https://jsonplaceholder.typicode.com/photos?albumId=" + props.album.id)
+        fetch("https://jsonplaceholder.typicode.com/photos?albumId=" + props.id)
             .then(res=> res.json())
             .then(ims => {
                 setImages(ims);
-            })
+            });
     }, []);
     return (
         <>
-            <NextSeo title={albumTitle}/>
+            <NextSeo title={props.title}/>
             <div>
-                <h1>{albumTitle}</h1>
+                <h1>{props.title}</h1>
                 <ImageGrid images={images}/>
             </div>
         </>
@@ -31,7 +30,7 @@ export const getStaticProps = async ({params}) => {
     const album = await resp.json();
     album.thumbnail = "https://picsum.photos/seed/" + params.id + "/300/200";
     return {
-        props: {album, images: []},
+        props: album,
     }
 }
 

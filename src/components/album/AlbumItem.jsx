@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import {Card} from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 import style from "../../styles/AlbumGrid.module.css";
 
 const AlbumItem = ({album}) => {

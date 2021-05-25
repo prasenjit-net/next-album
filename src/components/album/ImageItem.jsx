@@ -3,8 +3,8 @@ import {Card} from "react-bootstrap";
 import style from "../../styles/AlbumGrid.module.css";
 import Link from "next/link";
 
-const ImageItem = ({image}) => {
-    const imageUrl = "https://picsum.photos/seed/" + image.id + "/600/400";
+const ImageItem = ({image, albumId}) => {
+    const imageUrl = "https://picsum.photos/seed/" + albumId + "-" + image.id + "/600/400";
     return (
         <Card className={style.albumCard}>
             <Card.Body>

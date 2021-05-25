@@ -16,7 +16,7 @@ const AlbumPage = (props) => {
             <NextSeo title={props.title}/>
             <div>
                 <h1>{props.title}</h1>
-                <ImageGrid images={images}/>
+                <ImageGrid images={images} albumId={props.id}/>
             </div>
         </>
     );

@@ -3,7 +3,7 @@ import {Card} from "react-bootstrap";
 import style from "../../styles/AlbumGrid.module.css";
 
 const ImageItem = ({image}) => {
-    const imageUrl = "https://picsum.photos/seed/" + image.id + "/600/400"
+    const imageUrl = "https://picsum.photos/seed/" + image.id + "/600/400";
     return (
         <Card className={style.albumCard}>
             <Card.Body>

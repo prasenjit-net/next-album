@@ -7,7 +7,7 @@ const Index = ({albums}) => {
         <>
             <NextSeo title="Home"/>
             <div>
-                <h1>My Next Album</h1>
+                <h1 className="title main-title">My Next Album</h1>
                 <AlbumGrid albums={albums}/>
             </div>
         </>

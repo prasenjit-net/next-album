@@ -4,9 +4,9 @@ import ImageGrid from "../../components/album/ImageGrid";
 
 const AlbumPage = (props) => {
     const [images, setImages] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/photos?albumId=" + props.id)
-            .then(res=> res.json())
+            .then(res => res.json())
             .then(ims => {
                 setImages(ims);
             });
@@ -15,7 +15,7 @@ const AlbumPage = (props) => {
         <>
             <NextSeo title={props.title}/>
             <div>
-                <h1>{props.title}</h1>
+                <h1 className="title main-title">{props.title}</h1>
                 <ImageGrid images={images} albumId={props.id}/>
             </div>
         </>

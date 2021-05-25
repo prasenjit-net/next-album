@@ -9,7 +9,7 @@ const AlbumItem = ({album}) => {
             <Card.Body>
                 <Card.Img variant="top" src={album.thumbnail}/>
                 <Card.Body>
-                    <Card.Title>{album.title}</Card.Title>
+                    <Card.Title className="title">{album.title}</Card.Title>
                     <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, numquam!
                     </Card.Text>
